@@ -1,3 +1,3 @@
 <template>
-  <v-container>Home</v-container>
+  <v-container>HOME</v-container>
 </template>
