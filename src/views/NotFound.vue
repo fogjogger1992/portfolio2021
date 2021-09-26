@@ -9,13 +9,13 @@
     <v-col cols="12" class="pt-12">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <router-link to="/">
+          <router-link to="/" style="text-decoration: none">
             <v-icon
               aria-label="Go back to home page."
               x-large
-              color="rgba(0, 0, 0, 0.87)"
               v-bind="attrs"
               v-on="on"
+              color="black"
               class="icon-arrow mb-5"
               >mdi-arrow-up-circle-outline</v-icon
             >
@@ -30,6 +30,7 @@
 <style scoped>
 .main {
   height: 100vh;
+  color: #181818;
 }
 .num {
   font-size: 100px;

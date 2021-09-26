@@ -8,19 +8,19 @@ const opts = {
     customProperties: true,
   },
   theme: {
-    // 在這裡設定主題配色
-    dark: false, // 關閉深色主題
-    // 使用淺色主題，設定他的配色
+    dark: false,
     themes: {
       light: {
-        primary: '#244533',
-        secondary: '#FC620',
-        accent: '#0066CC',
+        primary: '#FC620F',
+        secondary: '#C7C7C7',
+        accent: '#FC620F',
         white: '#ffffff',
-        // error: '#f44336',
-        // warning: '#ff5722',
-        // info: '#607d8b',
-        // success: '#4caf50'
+        black: '#181818',
+        olive: '#244533',
+        // error: '',
+        // warning: '',
+        // info: '',
+        // success: ''
       },
     },
   },
