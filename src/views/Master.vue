@@ -185,7 +185,7 @@
         >
       </div>
     </v-row>
-    <v-row>
+    <v-row class="main">
       <!--Main-->
       <router-view></router-view>
     </v-row>
@@ -394,7 +394,7 @@
   .intro-wrapper {
     order: 3;
     font-size: 1.2rem;
-    padding-top: 10rem;
+    padding-top: 2rem;
     padding-right: 5rem;
   }
   .site-logo {
