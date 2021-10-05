@@ -6,9 +6,9 @@
         <p class="home-latest-project-subtitle">Latest Projects</p>
       </div>
       <div class="home-latest-project-intro col-12 col-sm-5">
-        My design goal combines two characteristics: solving the functional
-        problem and making positive impacts. The work I’ve done explains this
-        best. <br /><br />Take a peek at my latest projects:
+        Over the last 5 years, I've worked on a diverse range of products across
+        multiple disciplines from branding, visual design, and code.<br /><br />Take
+        a peek at my latest projects:
       </div>
     </v-row>
     <LatestProjects :latestProjects="latestProjects" />
