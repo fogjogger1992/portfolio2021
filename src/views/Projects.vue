@@ -32,7 +32,7 @@
         <v-row class="ma-0">
           <v-col
             v-for="project in filteredProjects"
-            :key="project.id"
+            :key="project.title.replace(/\s/g, '')"
             class="d-flex child-flex"
             cols="12"
             sm="6"
@@ -82,7 +82,9 @@
                       "
                     >
                       <div class="project-reveal-text-wrapper">
-                        <div class="project-reveal-category white--text">
+                        <div
+                          class="project-reveal-category white--text pb-xl-2"
+                        >
                           # {{ project.category }}
                         </div>
                         <div class="project-reveal-title">
@@ -132,13 +134,14 @@
 .project-reveal-content-wrapper {
   width: 85%;
 }
-.project-reveal-icon-wrapper {
-}
 /* xl - >1904px */
 @media screen and (min-width: 1904px) {
   .v-chip {
     font-size: 1.2rem;
     line-height: 2.2rem;
+  }
+  .project-reveal-content-wrapper {
+    font-size-adjust: cap-height 0.85;
   }
 }
 </style>
