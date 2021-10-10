@@ -1,5 +1,8 @@
 <template>
   <v-container>
+    <v-overlay :value="isLoading" opacity="opacity" color="white">
+      <Loading />
+    </v-overlay>
     <v-row class="nav justify-space-between">
       <!--Nav Overlay-->
       <v-overlay
@@ -437,16 +440,30 @@
 </style>
 
 <script>
+import Loading from '../components/Loading.vue'
+
 export default {
   name: 'Master',
+  components: {
+    Loading,
+  },
   data() {
     return {
+      isLoading: false,
       menu: {
         absolute: true,
         opacity: 1,
         overlay: false,
       },
     }
+  },
+  created() {
+    this.isLoading = true
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 3000)
   },
   methods: {
     backToTop() {
