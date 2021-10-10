@@ -1,13 +1,28 @@
 <template>
   <v-row class="top-project-wrapper col-12 pa-0 ma-0">
-    <v-img
+    <router-link
       v-for="(project, index) in topProjects"
-      :key="project.id"
-      :class="`top-project-${index + 1} secondary`"
-      :lazy-src="project.thumbnail"
-      :src="project.image"
+      :key="project.title.replace(/\s/g, '')"
+      :to="{
+        name: 'project',
+        params: { id: project.title.replace(/\s/g, '') },
+      }"
     >
-    </v-img>
+      <v-img
+        :class="`top-project-${index + 1} secondary`"
+        :lazy-src="project.thumbnail"
+        :src="project.image"
+      >
+        <template v-slot:placeholder>
+          <v-row class="fill-height ma-0" align="center" justify="center">
+            <v-progress-circular
+              indeterminate
+              color="black"
+            ></v-progress-circular>
+          </v-row>
+        </template>
+      </v-img>
+    </router-link>
   </v-row>
 </template>
 

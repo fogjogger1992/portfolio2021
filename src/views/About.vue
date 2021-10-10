@@ -19,8 +19,8 @@
         <div class="about-info-content col-12 pl-10">{{ intro }}</div>
         <div class="about-info-title col-12">Experience</div>
         <div
-          v-for="(experience, index) in experiences"
-          :key="index"
+          v-for="experience in experiences"
+          :key="experience.time.replace(/\s/g, '')"
           class="about-info-content col-12 pl-10"
         >
           <h3>{{ experience.position }}</h3>
@@ -29,8 +29,8 @@
         </div>
         <div class="about-info-title col-12">Education</div>
         <div
-          v-for="(education, index) in educations"
-          :key="index"
+          v-for="education in educations"
+          :key="education.time.replace(/\s/g, '')"
           class="about-info-content col-12 pl-10"
         >
           <h3>{{ education.major }}</h3>

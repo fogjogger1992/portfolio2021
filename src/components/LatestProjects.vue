@@ -2,7 +2,7 @@
   <v-container>
     <v-row
       v-for="(project, index) in latestProjects"
-      :key="project.id"
+      :key="project.title.replace(/\s/g, '')"
       class="latest-project-wrapper d-flex flex-row-reverse mb-16 pb-sm-16"
     >
       <div
@@ -10,13 +10,27 @@
           6 + ((index + 1) % 2) * 6
         }`"
       >
-        <router-link :to="{ name: 'project', params: { id: project.id } }">
+        <router-link
+          :to="{
+            name: 'project',
+            params: { id: project.title.replace(/\s/g, '') },
+          }"
+        >
           <v-img
             :lazy-src="project.thumbnail"
             :src="project.image"
             class="project-image secondary"
             height="100%"
-          ></v-img>
+          >
+            <template v-slot:placeholder>
+              <v-row class="fill-height ma-0" align="center" justify="center">
+                <v-progress-circular
+                  indeterminate
+                  color="black"
+                ></v-progress-circular>
+              </v-row>
+            </template>
+          </v-img>
         </router-link>
       </div>
       <div
