@@ -169,7 +169,7 @@
   .top-project-3 {
     right: 10vw;
     bottom: 10vh;
-    width: 25vw;
+    width: 30vw;
     height: 40vh;
   }
   .top-project-4 {
