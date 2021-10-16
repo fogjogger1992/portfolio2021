@@ -61,7 +61,7 @@
                   <router-link
                     :to="{
                       name: 'project',
-                      params: { id: project.title.replace(/\s/g, '') },
+                      params: { id: encodeURIComponent(project.title) },
                     }"
                     v-if="hover"
                     class="
@@ -82,10 +82,14 @@
                       "
                     >
                       <div class="project-reveal-text-wrapper">
-                        <div
-                          class="project-reveal-category white--text pb-xl-2"
-                        >
-                          # {{ project.category }}
+                        <div class="project-reveal-category pb-xl-2">
+                          <span
+                            v-for="(category, index) in project.categories"
+                            :key="category.replace(/\s/g, '') + index"
+                            class="white--text pr-2"
+                          >
+                            # {{ category }}</span
+                          >
                         </div>
                         <div class="project-reveal-title">
                           <h2 class="white--text">{{ project.title }}</h2>
@@ -99,7 +103,7 @@
                           text-right
                         "
                       >
-                        <v-icon color="white" class="icon-nav-arrow"
+                        <v-icon large color="white" class="icon-nav-arrow"
                           >mdi-arrow-top-right</v-icon
                         >
                       </div>
@@ -119,6 +123,7 @@
 .v-chip--active.v-chip--clickable.v-chip--no-color.theme--light.v-size--default
   >>> i {
   margin-left: -2px;
+  font-size: 1rem;
 }
 .v-card--reveal {
   align-items: center;
@@ -136,12 +141,23 @@
 }
 /* xl - >1904px */
 @media screen and (min-width: 1904px) {
-  .v-chip {
+  .v-chip,
+  .v-chip--active.v-chip--clickable.v-chip--no-color.theme--light.v-size--default
+    >>> i {
     font-size: 1.2rem;
     line-height: 2.2rem;
   }
-  .project-reveal-content-wrapper {
-    font-size-adjust: cap-height 0.85;
+  .project-reveal-category {
+    font-size: 1.2rem;
+  }
+  .project-reveal-title {
+    font-size: 1.5rem;
+  }
+}
+/* xs - < 600px */
+@media screen and (max-width: 600px) {
+  .projects-wrapper {
+    margin-bottom: 5vh;
   }
 }
 </style>
@@ -153,56 +169,56 @@ const pageData = {
     {
       id: '1',
       title: 'Project 1',
-      category: 'Identity & Communication',
+      categories: ['Identity & Communication'],
       image: 'https://picsum.photos/id/10/1920/1080',
       thumbnail: 'https://picsum.photos/id/10/16/9',
     },
     {
       id: '2',
       title: 'Project 2',
-      category: 'Identity & Communication',
+      categories: ['Identity & Communication'],
       image: 'https://picsum.photos/id/1000/1920/1080',
       thumbnail: 'https://picsum.photos/id/1000/16/9',
     },
     {
       id: '3',
       title: 'Project 3',
-      category: 'Identity & Communication',
+      categories: ['Identity & Communication'],
       image: 'https://picsum.photos/id/1018/1920/1080',
       thumbnail: 'https://picsum.photos/id/1018/16/9',
     },
     {
       id: '4',
       title: 'Project 4',
-      category: 'Programming',
+      categories: ['Programming'],
       image: 'https://picsum.photos/id/1020/1920/1080',
       thumbnail: 'https://picsum.photos/id/1020/16/9',
     },
     {
       id: '5',
       title: 'Project 5',
-      category: 'Programming',
+      categories: ['Programming'],
       image: 'https://picsum.photos/id/1023/1920/1080',
       thumbnail: 'https://picsum.photos/id/1023/16/9',
     },
     {
       id: '6',
       title: 'Project 6',
-      category: 'Programming',
+      categories: ['Programming', 'UI/UX'],
       image: 'https://picsum.photos/id/1026/1920/1080',
       thumbnail: 'https://picsum.photos/id/1026/16/9',
     },
     {
       id: '7',
       title: 'Project 7',
-      category: 'UI/UX',
+      categories: ['Programming', 'UI/UX'],
       image: 'https://picsum.photos/id/1029/1920/1080',
       thumbnail: 'https://picsum.photos/id/1029/16/9',
     },
     {
       id: '8',
       title: 'Project 8',
-      category: 'UI/UX',
+      categories: ['Programming', 'UI/UX'],
       image: 'https://picsum.photos/id/1031/1920/1080',
       thumbnail: 'https://picsum.photos/id/1031/16/9',
     },
@@ -251,8 +267,8 @@ export default {
       if (category === 'All') {
         return (this.filteredProjects = this.projects)
       }
-      this.filteredProjects = this.projects.filter(
-        (project) => project.category === category
+      this.filteredProjects = this.projects.filter((project) =>
+        project.categories.includes(category)
       )
     },
   },
