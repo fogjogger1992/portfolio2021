@@ -9,7 +9,7 @@
     <v-col cols="12" class="pt-12">
       <v-tooltip bottom>
         <template v-slot:activator="{ on, attrs }">
-          <router-link to="/" style="text-decoration: none">
+          <router-link to="/home" style="text-decoration: none">
             <v-icon
               aria-label="Go back to home page."
               x-large
