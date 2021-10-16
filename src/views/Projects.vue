@@ -146,6 +146,7 @@
     >>> i {
     font-size: 1.2rem;
     line-height: 2.2rem;
+    margin-left: 2px;
   }
   .project-reveal-category {
     font-size: 1.2rem;
