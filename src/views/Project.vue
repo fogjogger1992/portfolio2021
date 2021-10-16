@@ -163,6 +163,9 @@
 </template>
 
 <style scoped>
+.v-image {
+  height: 60vh;
+}
 .project-info-title {
   font-size: 3rem;
 }
@@ -193,6 +196,9 @@
 }
 /* xs - < 600px */
 @media screen and (max-width: 600px) {
+  .v-image {
+    height: auto;
+  }
   .project-content-wrapper {
     margin-bottom: 5vh;
   }
