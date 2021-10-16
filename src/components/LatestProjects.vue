@@ -13,7 +13,7 @@
         <router-link
           :to="{
             name: 'project',
-            params: { id: project.title.replace(/\s/g, '') },
+            params: { id: encodeURIComponent(project.title) },
           }"
         >
           <v-img
