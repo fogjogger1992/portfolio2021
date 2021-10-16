@@ -7,7 +7,7 @@
       </div>
       <div class="home-latest-project-intro col-12 col-sm-5">
         Over the last 5 years, I've worked on a diverse range of products across
-        multiple disciplines from branding, visual design, and code.<br /><br />Take
+        multiple disciplines from branding, visual design, and programming.<br /><br />Take
         a peek at my latest projects:
       </div>
     </v-row>
