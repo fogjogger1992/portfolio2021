@@ -253,18 +253,20 @@ export default {
       const { categories, projects } = pageData
       this.categories = categories
       this.projects = projects
-      const category = decodeURIComponent(queryCategory)
-      if (category) {
+      try {
+        const category = decodeURIComponent(queryCategory)
         this.categoryFilter(category)
-
         const categoryFilter = (string) => string === category
         this.filter = this.categories.findIndex(categoryFilter)
-      } else {
+        if (this.filter === -1) {
+          this.categoryFilter('All')
+        }
+      } catch (e) {
         this.categoryFilter('All')
       }
     },
     categoryFilter(category) {
-      if (category === 'All') {
+      if (category === 'All' || category === '' || !category) {
         return (this.filteredProjects = this.projects)
       }
       this.filteredProjects = this.projects.filter((project) =>
