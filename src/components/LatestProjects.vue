@@ -105,14 +105,32 @@
   .project-text-wrapper-spacer {
     height: 45vh;
   }
+  .project-text-wrapper-title {
+    padding-right: 2rem;
+  }
   .project-image-wrapper {
     height: 75vh;
+  }
+}
+/* 1080px-1264px */
+@media screen and (max-width: 1264px) {
+  .project-text-wrapper-spacer {
+    height: 33vh;
+  }
+}
+/* 960px-1080px */
+@media screen and (max-width: 1080px) {
+  .project-text-wrapper-spacer {
+    height: 35vh;
   }
 }
 /* sm - 600px-960px */
 @media screen and (max-width: 960px) {
   .project-text-wrapper-spacer {
-    height: 20vh;
+    height: 25vh;
+  }
+  .project-text-wrapper-title {
+    padding-right: 2rem;
   }
   .project-image-wrapper {
     height: 60vh;
