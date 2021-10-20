@@ -43,10 +43,7 @@
             10 + (index % 2) * 2
           } pa-0`"
         >
-          <div
-            v-if="index % 2 === 1"
-            class="project-text-wrapper-spacer no gutter"
-          ></div>
+          <div v-if="index % 2 === 1" class="project-text-wrapper-spacer"></div>
           <router-link
             :to="{ name: 'project', params: { id: project.id } }"
             class="text-decoration-none"
@@ -88,12 +85,13 @@
   height: 80vh;
 }
 .project-text-wrapper-spacer {
-  height: 50vh;
+  height: 39vh;
 }
 .project-text-wrapper-title {
   font-size: 4rem;
   font-weight: 400;
   word-wrap: break-word;
+  padding-right: 8rem;
 }
 .project-text-wrapper-icon >>> img {
   height: 5rem;
@@ -122,11 +120,16 @@
 }
 /* xs - < 600px */
 @media screen and (max-width: 600px) {
+  .project-image-wrapper {
+    height: auto;
+    aspect-ratio: 1;
+  }
   .project-text-wrapper-spacer {
     height: 0;
   }
   .project-text-wrapper-title {
     font-size: 3rem;
+    padding-right: 0;
   }
   .project-text-wrapper-icon {
     text-align: left !important;

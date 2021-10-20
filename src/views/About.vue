@@ -73,7 +73,7 @@
   color: gray;
 }
 .about-info-content {
-  white-space: pre-wrap;
+  white-space: pre-line;
   font-weight: 300;
 }
 .about-info-content >>> span {
