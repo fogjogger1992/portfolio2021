@@ -73,7 +73,7 @@
                     "
                     style="height: 100%"
                   >
-                    <div class="project-reveal-spacer"></div>
+                    <div class="project-reveal-spacer flex-grow-1"></div>
                     <div
                       class="
                         project-reveal-content-wrapper
@@ -92,7 +92,7 @@
                           >
                         </div>
                         <div class="project-reveal-title">
-                          <h2 class="white--text">{{ project.title }}</h2>
+                          <h2 class="white--text mb-8">{{ project.title }}</h2>
                         </div>
                       </div>
 
@@ -133,9 +133,6 @@
   width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 50%);
 }
-.project-reveal-spacer {
-  height: 70%;
-}
 .project-reveal-content-wrapper {
   width: 85%;
 }
@@ -168,60 +165,60 @@ const pageData = {
   categories: ['All', 'Identity & Communication', 'Programming', 'UI/UX'],
   projects: [
     {
-      id: '1',
-      title: 'Project 1',
-      categories: ['Identity & Communication'],
-      image: 'https://picsum.photos/id/10/1920/1080',
-      thumbnail: 'https://picsum.photos/id/10/16/9',
-    },
-    {
-      id: '2',
-      title: 'Project 2',
-      categories: ['Identity & Communication'],
-      image: 'https://picsum.photos/id/1000/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1000/16/9',
-    },
-    {
-      id: '3',
-      title: 'Project 3',
-      categories: ['Identity & Communication'],
-      image: 'https://picsum.photos/id/1018/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1018/16/9',
-    },
-    {
-      id: '4',
-      title: 'Project 4',
+      id: '8',
+      title: 'Simple Twitter',
       categories: ['Programming'],
-      image: 'https://picsum.photos/id/1020/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1020/16/9',
-    },
-    {
-      id: '5',
-      title: 'Project 5',
-      categories: ['Programming'],
-      image: 'https://picsum.photos/id/1023/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1023/16/9',
-    },
-    {
-      id: '6',
-      title: 'Project 6',
-      categories: ['Programming', 'UI/UX'],
-      image: 'https://picsum.photos/id/1026/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1026/16/9',
+      image: require('@/assets/projects/simple-twitter/cover.jpg'),
+      thumbnail: require('@/assets/projects/simple-twitter/cover-thumbnail.jpg'),
     },
     {
       id: '7',
-      title: 'Project 7',
-      categories: ['Programming', 'UI/UX'],
-      image: 'https://picsum.photos/id/1029/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1029/16/9',
+      title: 'Sole Fitness',
+      categories: ['Identity & Communication'],
+      image: require('@/assets/projects/sole-fitness/cover.jpg'),
+      thumbnail: require('@/assets/projects/sole-fitness/cover-thumbnail.jpg'),
     },
     {
-      id: '8',
-      title: 'Project 8',
+      id: '6',
+      title: 'Fuel Fitness',
+      categories: ['Identity & Communication'],
+      image: require('@/assets/projects/fuel-fitness/cover-1.jpg'),
+      thumbnail: require('@/assets/projects/fuel-fitness/cover-1-thumbnail.jpg'),
+    },
+    {
+      id: '5',
+      title: 'Expense Tracker',
       categories: ['Programming', 'UI/UX'],
-      image: 'https://picsum.photos/id/1031/1920/1080',
-      thumbnail: 'https://picsum.photos/id/1031/16/9',
+      image: require('@/assets/projects/expense-tracker/cover.jpg'),
+      thumbnail: require('@/assets/projects/expense-tracker/cover-thumbnail.jpg'),
+    },
+    {
+      id: '4',
+      title: 'Philips PTS Official Page',
+      categories: ['UI/UX'],
+      image: require('@/assets/projects/phillips-pts/cover.jpg'),
+      thumbnail: require('@/assets/projects/phillips-pts/cover-thumbnail.jpg'),
+    },
+    {
+      id: '3',
+      title: 'Dyaco B2B Order Placing Site',
+      categories: ['UI/UX'],
+      image: require('@/assets/projects/dyaco-b2b/cover.jpg'),
+      imageThumbnail: require('@/assets/projects/dyaco-b2b/cover-thumbnail.jpg'),
+    },
+    {
+      id: '2',
+      title: 'Alma Burton',
+      categories: ['Identity & Communication'],
+      image: require('@/assets/projects/alma-burton/cover.jpg'),
+      thumbnail: require('@/assets/projects/alma-burton/cover-thumbnail.jpg'),
+    },
+    {
+      id: '1',
+      title: 'Alpha Jet',
+      categories: ['Identity & Communication'],
+      image: require('@/assets/projects/alpha-jet/cover-1.jpg'),
+      thumbnail: require('@/assets/projects/alpha-jet/cover-1-thumbnail.jpg'),
     },
   ],
 }
