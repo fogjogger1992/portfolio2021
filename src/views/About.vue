@@ -138,12 +138,12 @@
 <script>
 const pageData = {
   portrait: {
-    src: 'https://picsum.photos/id/275/4288/2848.jpg',
-    lazySrc: 'https://picsum.photos/id/275/16/9.jpg',
+    src: require('@/assets/about/ej.jpg'),
+    lazySrc: require('@/assets/about/ej-thumbnail.jpg'),
   },
   portraitBg: {
-    src: 'https://picsum.photos/id/106/2592/1728.jpg',
-    lazySrc: 'https://picsum.photos/id/106/16/9.jpg',
+    src: require('@/assets/about/bg.jpg'),
+    lazySrc: require('@/assets/about/bg-thumbnail.jpg'),
   },
   intro:
     "I am a designer with front-end development skills. I like to study various fields such as UXUI, graphic design and programming. \n\nKnowledge in various fields leads to creative synergy. That's my strength.",
