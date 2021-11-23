@@ -146,7 +146,7 @@ const pageData = {
     lazySrc: require('@/assets/about/bg-thumbnail.jpg'),
   },
   intro:
-    "I am a designer with front-end development skills. I like to study various fields such as UXUI, graphic design and programming. \n\nKnowledge in various fields leads to creative synergy. That's my strength.",
+    "EJ is a designer with front-end development skills. She likes to study various fields such as UXUI, graphic design, and programming. \n\nKnowledge in various fields leads to creative synergy. That's her strength.",
   experiences: [
     {
       time: 'Jun. 2018 - Present',
@@ -160,14 +160,14 @@ const pageData = {
       company: 'Alma Burton Inc.',
       position: 'Graphic Designer',
       description:
-        'Chief designer of the start-up team. Participated in the establishment of the entire brand identity, from logo design to web design and development.',
+        'Chief designer of the start-up team. Lead the establishment of the entire brand identity, from logo design to web design and development.',
     },
     {
       time: 'Apr. 2017 - Apr. 2018',
       company: 'ALPHA JET CO. Ltd',
       position: 'Graphic Designer',
       description:
-        'Chief designer of the start-up team. Participated in the establishment of the entire brand identity, from logo design to web design and development.',
+        'Chief designer of the start-up team. Lead the establishment of the entire brand identity, from logo design to web design and development.',
     },
   ],
   educations: [
@@ -180,7 +180,7 @@ const pageData = {
     {
       time: 'Oct. 2020 - Aug. 2021',
       school: 'Alpha Camp',
-      major: 'Front-End',
+      major: 'Front-End Development',
       program: 'Full Stack Web Development Program',
     },
     {
