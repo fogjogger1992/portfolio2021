@@ -428,7 +428,7 @@
     top: 5vh;
   }
   .overlay-menu-spacer {
-    height: 0rem;
+    height: 5vh;
   }
   .overlay-menu-list,
   .overlay-info {
