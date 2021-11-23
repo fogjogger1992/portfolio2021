@@ -259,16 +259,16 @@
         </a>
       </div>
       <div class="footer-all-rights-reserved col-7 col-sm-12">
-        <p>
-          EJ TSENG © 2021 ALL RIGHTS RESERVED
-          <br />
+        <p class="pb-0 mb-0">EJ TSENG © 2021 ALL RIGHTS RESERVED</p>
+
+        <p class="grey--text">
           This website is designed and developed by me, powered by
           <a
             href="https://vuejs.org/"
             target="_blank"
             rel="noreferrer noopener"
             style="text-decoration: none"
-            class="black--text"
+            class="grey--text"
             >Vue.js</a
           >
           and
@@ -277,7 +277,7 @@
             target="_blank"
             rel="noreferrer noopener"
             style="text-decoration: none"
-            class="black--text"
+            class="grey--text"
             >Vuetify</a
           >.
         </p>
