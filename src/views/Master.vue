@@ -311,7 +311,7 @@
 .icon-nav-menu-close {
   position: fixed;
   top: 10vh;
-  right: -85vw;
+  right: 10vw;
 }
 .overlay-menu-spacer {
   height: 8rem;
